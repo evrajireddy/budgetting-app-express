@@ -1,9 +1,14 @@
 // Dependencies
 const express = require("express");
-// const colors = require("./models/color");
+const cors = require("cors");
 
 // Configuration
 const app = express();
+
+//TO SUPPORT POST
+app.use(express.json())
+//TO ENABLE CORS
+app.use(cors());
 
 // Routes
 app.get("/", (req, res) => {
